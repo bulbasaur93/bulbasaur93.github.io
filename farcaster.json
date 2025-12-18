@@ -1,0 +1,24 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "BASE Snake",
+    "homeUrl": "https://bulbasaur93.github.io/base-snake/",
+    "iconUrl": "https://bulbasaur93.github.io/base-snake/icon.png",
+    "splashImageUrl": "https://bulbasaur93.github.io/base-snake/splash.png",
+    "splashBackgroundColor": "#ffffff",
+    "primaryCategory": "games",
+    "tags": ["snake", "game", "base", "miniapp"],
+    "tagline": "Classic Snake on Base",
+    "subtitle": "Snake game with wallet connect",
+    "description": "A classic Snake game built as a lightweight mini app for the Base ecosystem.",
+    "heroImageUrl": "https://bulbasaur93.github.io/base-snake/hero.png",
+    "screenshotUrls": [
+      "https://bulbasaur93.github.io/base-snake/ss1.png"
+    ]
+  }
+}
