@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BASE Snake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0069ff" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="base:app_id" content="694055e5d19763ca26ddc320" />
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <header class="game-header">
+        <h1>BASE Snake</h1>
+        <div class="score-panel">
+          <div>Счёт: <span id="score">0</span></div>
+          <div>Рекорд: <span id="highScore">0</span></div>
+        </div>
+      </header>
+
+      <main class="game-main">
+        <canvas id="gameCanvas" width="480" height="480"></canvas>
+
+        <div class="controls">
+          <button id="btnStart" class="btn primary">Старт / Пауза</button>
+          <button id="btnRestart" class="btn secondary">Заново</button>
+        </div>
+
+        <div class="hint">
+          Управление: стрелки или WASD • Пауза: Пробел
+        </div>
+
+        <div class="wallet">
+          <button id="connect" class="btn secondary">Connect Phantom</button>
+          <button id="connectCb" class="btn secondary">Connect Coinbase</button>
+          <p id="address"></p>
+          <p id="network"></p>
+        </div>
+      </main>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+          <h2 id="overlayTitle">Игра окончена</h2>
+          <p id="overlayText"></p>
+          <button id="overlayButton" class="btn primary">Играть ещё</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@coinbase/wallet-sdk@4.0.0/dist/CoinbaseWalletSDK.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+  </html>
+
+
+
+
+
+
