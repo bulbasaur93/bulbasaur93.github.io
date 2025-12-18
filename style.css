@@ -1,0 +1,196 @@
+:root {
+  --bg-gradient-start: #0f172a;
+  --bg-gradient-end: #1d4ed8;
+  --grid-color: rgba(15, 23, 42, 0.06);
+  --snake-head: #16a34a;
+  --snake-body: #22c55e;
+  --food: #2563eb;
+  --text-main: #0f172a;
+  --accent: #1d4ed8;
+  --btn-primary-bg: #2563eb;
+  --btn-primary-hover: #1d4ed8;
+  --btn-secondary-bg: #0ea5e9;
+  --btn-secondary-hover: #0284c7;
+  --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at top left, #1d4ed8 0, transparent 55%),
+    radial-gradient(circle at bottom right, #0ea5e9 0, transparent 55%),
+    linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+}
+
+.game-wrapper {
+  width: min(520px, 100vw - 32px);
+  background: #1d4ed8; /* синий блок вокруг белого поля */
+  border-radius: 24px;
+  padding: 20px 20px 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(191, 219, 254, 0.55);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.game-header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #020617; /* чёрный/очень тёмный для названия игры */
+  background: #bfdbfe; /* светло-синий фон под названием */
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.score-panel {
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.score-panel span {
+  font-weight: 700;
+  color: #facc15; /* контрастный жёлтый цвет для счёта */
+}
+
+.game-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  background: #ffffff; /* белое игровое поле */
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.35);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--btn-primary-bg), #1e40af);
+}
+
+.btn.secondary {
+  background: linear-gradient(135deg, var(--btn-secondary-bg), #2563eb);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, var(--btn-primary-hover), #1e3a8a);
+}
+
+.btn.secondary:hover {
+  background: linear-gradient(135deg, var(--btn-secondary-hover), #1d4ed8);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(15, 23, 42, 0.25),
+    rgba(15, 23, 42, 0.55)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: #0f172a;
+  padding: 24px 24px 20px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 260px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(191, 219, 254, 0.5);
+}
+
+.overlay-content h2 {
+  margin-bottom: 8px;
+}
+
+.overlay-content p {
+  margin-bottom: 14px;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+@media (max-width: 480px) {
+  .game-wrapper {
+    padding: 16px 14px 18px;
+    border-radius: 20px;
+  }
+
+  .game-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .game-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .score-panel {
+    align-self: flex-end;
+  }
+}
+
