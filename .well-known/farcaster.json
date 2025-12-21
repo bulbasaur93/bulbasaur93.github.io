@@ -7,19 +7,19 @@
   "miniApp": {
     "version": "1",
     "name": "BASE Snake",
-    "imageUrl": "https://bulbasaur93.github.io/base-snake/icon.png",
-    "homeUrl": "https://bulbasaur93.github.io/base-snake/",
-    "iconUrl": "https://bulbasaur93.github.io/base-snake/icon.png",
-    "splashImageUrl": "https://bulbasaur93.github.io/base-snake/splash.png",
+    "imageUrl": "https://https://bulbasaur93.github.io/icon.png",
+    "homeUrl": "https://bulbasaur93.github.io/",
+    "iconUrl": "https://https://bulbasaur93.github.io/icon.png",
+    "splashImageUrl": "https://bulbasaur93.github.io/splash.png",
     "splashBackgroundColor": "#ffffff",
     "primaryCategory": "games",
     "tags": ["snake", "game", "base", "miniapp"],
     "tagline": "Classic Snake on Base",
     "subtitle": "Snake game with wallet connect",
     "description": "A classic Snake game built as a lightweight mini app for the Base ecosystem.",
-    "heroImageUrl": "https://bulbasaur93.github.io/base-snake/hero.png",
+    "heroImageUrl": "https://bulbasaur93.github.io/hero.png",
     "screenshotUrls": [
-      "https://bulbasaur93.github.io/base-snake/ss1.png"
+      "https://bulbasaur93.github.io/ss1.png"
     ]
   }
 }
